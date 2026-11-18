@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Видеотека Медиатеки: видеоролик с превью и плеером HTML5.">
+    <title>Медиатека — видеотека</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/favicon.svg" alt="Логотип сайта Медиатека" width="64" height="64">
+                <h1>Медиатека</h1>
+            </div>
+            <p>Природа в трёх форматах: фотографии, звуки и видео на HTML5</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="photo.html" class="nav-link">Фотогалерея</a></li>
+            <li><a href="audio.html" class="nav-link">Аудиотека</a></li>
+            <li><a href="video.html" class="nav-link active">Видеотека</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Видеотека</h2>
+        <p>
+            Ролик вставлен тегом <strong>video</strong> с атрибутами
+            <strong>controls</strong> и <strong>poster</strong>: до запуска плеер
+            показывает картинку-превью, а не пустой чёрный прямоугольник.
+            Внутри — два источника: MP4 и WebM.
+        </p>
+
+        <div class="media-block">
+            <h4>Над облаками: таймлапс</h4>
+            <p>Ускоренная съёмка движения облаков над горным хребтом.</p>
+            <video controls preload="metadata" poster="images/video-poster.jpg" width="1280" height="720">
+                <source src="video/video.mp4" type="video/mp4">
+                <source src="video/video.webm" type="video/webm">
+                Ваш браузер не поддерживает элемент video.
+                <a href="video/video.mp4">Скачать ролик</a>.
+            </video>
+        </div>
+
+        <h3>Что использовано в разметке</h3>
+        <ul class="page-list">
+            <li><strong>controls</strong> — встроенные кнопки: пуск, громкость, полный экран</li>
+            <li><strong>poster</strong> — превью до начала воспроизведения</li>
+            <li><strong>preload="metadata"</strong> — заранее грузится только длительность и размер кадра</li>
+            <li><strong>width / height</strong> — пропорции 16:9, макет не смещается при загрузке</li>
+        </ul>
+
+        <div class="tech-info">
+            <p><strong>Куда положить файлы:</strong> video/video.mp4 и images/video-poster.jpg</p>
+            <p>MP4 с кодеками H.264 + AAC воспроизводится во всех браузерах; WebM не обязателен.</p>
+        </div>
+
+        <a href="index.html" class="btn primary-btn">← Вернуться на главную</a>
+    </main>
+
+    <aside class="sidebar">
+        <section class="sidebar-section">
+            <h3>Навигация</h3>
+            <ul class="sidebar-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="photo.html">Фотогалерея</a></li>
+                <li><a href="audio.html">Аудиотека</a></li>
+                <li><a href="video.html">Видеотека</a></li>
+            </ul>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Теги страницы</h3>
+            <div class="tech-info">
+                <p><strong>video</strong> — плеер</p>
+                <p><strong>source</strong> — источник видео</p>
+                <p><strong>poster</strong> — превью-кадр</p>
+                <p><strong>controls</strong> — управление</p>
+            </div>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Рекомендации</h3>
+            <div class="tech-info">
+                <p>Ролик: MP4, 1280×720, до 30 секунд, вес до 20 МБ — страница откроется быстро.</p>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <p>Медиатека — учебный проект</p>
+            <p>Практическая работа №3 · HTML5 + CSS3 · <span id="year">2026</span></p>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="photo.html">Фото</a>
+                <a href="audio.html">Аудио</a>
+                <a href="video.html">Видео</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

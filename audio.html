@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Аудиотека Медиатеки: три звуковые дорожки со встроенным плеером HTML5.">
+    <title>Медиатека — аудиотека</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/favicon.svg" alt="Логотип сайта Медиатека" width="64" height="64">
+                <h1>Медиатека</h1>
+            </div>
+            <p>Природа в трёх форматах: фотографии, звуки и видео на HTML5</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="photo.html" class="nav-link">Фотогалерея</a></li>
+            <li><a href="audio.html" class="nav-link active">Аудиотека</a></li>
+            <li><a href="video.html" class="nav-link">Видеотека</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Аудиотека</h2>
+        <p>
+            Три звуковые дорожки со встроенным плеером. Каждая вставлена тегом
+            <strong>audio</strong> с атрибутом <strong>controls</strong>, а внутри —
+            два тега <strong>source</strong>: основной MP3 и запасной OGG.
+            Браузер выбирает первый формат, который умеет воспроизводить.
+        </p>
+
+        <div class="media-block">
+            <h4>Пение птиц в утреннем лесу</h4>
+            <p>Запись на рассвете: синицы, дрозды и дальний стук дятла.</p>
+            <audio controls preload="metadata">
+                <source src="audio/track-1.mp3" type="audio/mpeg">
+                <source src="audio/track-1.ogg" type="audio/ogg">
+                Ваш браузер не поддерживает элемент audio.
+                <a href="audio/track-1.mp3">Скачать файл</a>.
+            </audio>
+        </div>
+
+        <div class="media-block">
+            <h4>Шум прибоя</h4>
+            <p>Волны на галечном берегу — ровный фон для чтения и работы.</p>
+            <audio controls preload="metadata">
+                <source src="audio/track-2.mp3" type="audio/mpeg">
+                <source src="audio/track-2.ogg" type="audio/ogg">
+                Ваш браузер не поддерживает элемент audio.
+                <a href="audio/track-2.mp3">Скачать файл</a>.
+            </audio>
+        </div>
+
+        <div class="media-block">
+            <h4>Дождь по листьям</h4>
+            <p>Летний ливень в лиственном лесу с редкими раскатами грома.</p>
+            <audio controls preload="metadata">
+                <source src="audio/track-3.mp3" type="audio/mpeg">
+                <source src="audio/track-3.ogg" type="audio/ogg">
+                Ваш браузер не поддерживает элемент audio.
+                <a href="audio/track-3.mp3">Скачать файл</a>.
+            </audio>
+        </div>
+
+        <div class="tech-info">
+            <p><strong>Куда положить файлы:</strong> audio/track-1.mp3, track-2.mp3, track-3.mp3</p>
+            <p>Формат OGG не обязателен: если его нет, браузер просто возьмёт MP3.</p>
+        </div>
+
+        <a href="index.html" class="btn primary-btn">← Вернуться на главную</a>
+    </main>
+
+    <aside class="sidebar">
+        <section class="sidebar-section">
+            <h3>Навигация</h3>
+            <ul class="sidebar-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="photo.html">Фотогалерея</a></li>
+                <li><a href="audio.html">Аудиотека</a></li>
+                <li><a href="video.html">Видеотека</a></li>
+            </ul>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Теги страницы</h3>
+            <div class="tech-info">
+                <p><strong>audio</strong> — плеер</p>
+                <p><strong>source</strong> — источник звука</p>
+                <p><strong>controls</strong> — кнопки управления</p>
+                <p><strong>preload</strong> — что грузить заранее</p>
+            </div>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Форматы</h3>
+            <div class="tech-info">
+                <p>MP3 поддерживают все браузеры, OGG — Chrome, Firefox и Edge.</p>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <p>Медиатека — учебный проект</p>
+            <p>Практическая работа №3 · HTML5 + CSS3 · <span id="year">2026</span></p>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="photo.html">Фото</a>
+                <a href="audio.html">Аудио</a>
+                <a href="video.html">Видео</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

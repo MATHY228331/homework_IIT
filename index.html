@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Медиатека — учебный сайт из четырёх страниц: фотогалерея, аудиотека и видеотека.">
+    <title>Медиатека — главная</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/favicon.svg" alt="Логотип сайта Медиатека" width="64" height="64">
+                <h1>Медиатека</h1>
+            </div>
+            <p>Природа в трёх форматах: фотографии, звуки и видео на HTML5</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link active">Главная</a></li>
+            <li><a href="photo.html" class="nav-link">Фотогалерея</a></li>
+            <li><a href="audio.html" class="nav-link">Аудиотека</a></li>
+            <li><a href="video.html" class="nav-link">Видеотека</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Добро пожаловать в Медиатеку</h2>
+        <p>
+            Это учебный сайт из четырёх страниц, собранный на чистом HTML5 и CSS3.
+            Каждая страница построена по одной схеме: шапка, панель навигации,
+            содержимое, боковая панель и подвал. Оформление вынесено в один общий
+            файл стилей, поэтому все разделы выглядят одинаково.
+        </p>
+        <p>
+            Сайт показывает три способа работы с медиа в браузере: вывод изображений
+            тегом <strong>img</strong>, воспроизведение звука тегом <strong>audio</strong>
+            и показ видео тегом <strong>video</strong>. Все файлы хранятся локально,
+            в отдельных каталогах проекта.
+        </p>
+
+        <h3>Разделы сайта</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📷</div>
+                <h4>Фотогалерея</h4>
+                <p>Шесть снимков природы с подписями, выложенные адаптивной сеткой.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <h4>Аудиотека</h4>
+                <p>Три звуковые дорожки со встроенным плеером и запасным форматом.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎬</div>
+                <h4>Видеотека</h4>
+                <p>Видеоролик с превью, элементами управления и двумя источниками.</p>
+            </div>
+        </div>
+
+        <h3>Ссылки на дочерние страницы</h3>
+        <ul class="page-list">
+            <li><a href="photo.html">Фотогалерея</a> — несколько фотографий с подписями</li>
+            <li><a href="audio.html">Аудиотека</a> — воспроизведение звуковых файлов</li>
+            <li><a href="video.html">Видеотека</a> — воспроизведение видеофайла</li>
+        </ul>
+
+        <h3>Как устроен проект</h3>
+        <ul class="page-list">
+            <li><strong>images/</strong> — фотографии, превью видео и иконка сайта</li>
+            <li><strong>audio/</strong> — звуковые файлы в форматах MP3 и OGG</li>
+            <li><strong>video/</strong> — ролик в форматах MP4 и WebM</li>
+            <li><strong>styles/</strong> — общая таблица стилей для всех страниц</li>
+            <li><strong>scripts/</strong> — небольшой скрипт: год в подвале и подсветка меню</li>
+        </ul>
+
+        <a href="photo.html" class="btn primary-btn">Начать с фотогалереи</a>
+    </main>
+
+    <aside class="sidebar">
+        <section class="sidebar-section">
+            <h3>Навигация</h3>
+            <ul class="sidebar-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="photo.html">Фотогалерея</a></li>
+                <li><a href="audio.html">Аудиотека</a></li>
+                <li><a href="video.html">Видеотека</a></li>
+            </ul>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>О проекте</h3>
+            <div class="tech-info">
+                <p><strong>Разметка:</strong> HTML5</p>
+                <p><strong>Стили:</strong> CSS3, Grid</p>
+                <p><strong>Страниц:</strong> 4</p>
+                <p><strong>Шрифт:</strong> Inter</p>
+            </div>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Совет</h3>
+            <div class="tech-info">
+                <p>Открывайте сайт через Live Server или Live Preview в VS Code — так корректно подгружаются шрифты и медиафайлы.</p>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <p>Медиатека — учебный проект</p>
+            <p>Практическая работа №3 · HTML5 + CSS3 · <span id="year">2026</span></p>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="photo.html">Фото</a>
+                <a href="audio.html">Аудио</a>
+                <a href="video.html">Видео</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

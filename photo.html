@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Фотогалерея Медиатеки: шесть фотографий природы с подписями.">
+    <title>Медиатека — фотогалерея</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/favicon.svg" alt="Логотип сайта Медиатека" width="64" height="64">
+                <h1>Медиатека</h1>
+            </div>
+            <p>Природа в трёх форматах: фотографии, звуки и видео на HTML5</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="photo.html" class="nav-link active">Фотогалерея</a></li>
+            <li><a href="audio.html" class="nav-link">Аудиотека</a></li>
+            <li><a href="video.html" class="nav-link">Видеотека</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Фотогалерея</h2>
+        <p>
+            Шесть снимков, выложенных адаптивной сеткой: на широком экране они
+            занимают три колонки, на планшете — две, на телефоне — одну.
+            Каждое изображение вставлено тегом <strong>img</strong> с обязательным
+            атрибутом <strong>alt</strong> и подписью в <strong>figcaption</strong>.
+        </p>
+        <p>
+            Атрибут <strong>loading="lazy"</strong> откладывает загрузку кадров до
+            прокрутки, а заданные ширина и высота не дают макету «прыгать».
+        </p>
+
+        <div class="gallery">
+            <figure>
+                <img src="images/photo-1.jpg" alt="Утренний туман над рекой" width="600" height="400" loading="lazy">
+                <figcaption>Утренний туман над рекой</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo-2.jpg" alt="Сосновый бор после дождя" width="600" height="400" loading="lazy">
+                <figcaption>Сосновый бор после дождя</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo-3.jpg" alt="Горное озеро на рассвете" width="600" height="400" loading="lazy">
+                <figcaption>Горное озеро на рассвете</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo-4.jpg" alt="Полевые цветы в июле" width="600" height="400" loading="lazy">
+                <figcaption>Полевые цветы в июле</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo-5.jpg" alt="Осенняя тропа в берёзовой роще" width="600" height="400" loading="lazy">
+                <figcaption>Осенняя тропа в берёзовой роще</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo-6.jpg" alt="Закат над морем" width="600" height="400" loading="lazy">
+                <figcaption>Закат над морем</figcaption>
+            </figure>
+        </div>
+
+        <div class="tech-info">
+            <p><strong>Куда положить файлы:</strong> images/photo-1.jpg … images/photo-6.jpg</p>
+            <p>Пока файлов нет, вместо них показываются аккуратные серые заглушки с подписью.</p>
+        </div>
+
+        <a href="index.html" class="btn primary-btn">← Вернуться на главную</a>
+    </main>
+
+    <aside class="sidebar">
+        <section class="sidebar-section">
+            <h3>Навигация</h3>
+            <ul class="sidebar-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="photo.html">Фотогалерея</a></li>
+                <li><a href="audio.html">Аудиотека</a></li>
+                <li><a href="video.html">Видеотека</a></li>
+            </ul>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Теги страницы</h3>
+            <div class="tech-info">
+                <p><strong>img</strong> — вставка изображения</p>
+                <p><strong>figure</strong> — кадр с подписью</p>
+                <p><strong>figcaption</strong> — подпись</p>
+                <p><strong>alt</strong> — текст для незрячих</p>
+            </div>
+        </section>
+
+        <section class="sidebar-section">
+            <h3>Рекомендации</h3>
+            <div class="tech-info">
+                <p>Формат: JPG, размер около 1200×800 px, вес до 300 КБ на снимок.</p>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <p>Медиатека — учебный проект</p>
+            <p>Практическая работа №3 · HTML5 + CSS3 · <span id="year">2026</span></p>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="photo.html">Фото</a>
+                <a href="audio.html">Аудио</a>
+                <a href="video.html">Видео</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
